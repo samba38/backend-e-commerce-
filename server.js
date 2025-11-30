@@ -23,13 +23,11 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-  origin: [
-    "http://localhost:5173",
-    "https://backend-e-commerce-2-wjzg.onrender.com",
-    process.env.FRONTEND_URL
-  ],
-  credentials: true,
-})
+    origin: [
+      "http://localhost:5173",
+    ],
+    credentials: true,
+  })
 );
 
 // Connect to MongoDB
