@@ -76,7 +76,7 @@ MONGO_URI=your_mongodb_url
 JWT_SECRET=your_secret
 EMAIL_USER=example@gmail.com
 EMAIL_PASS=your_gmail_app_password
-FRONTEND_URL=http://localhost:5173
+FRONTEND_URL=https://frontend-e-commerce-5dqz.vercel.app
 
 
 ⚠️ Never commit .env to GitHub
@@ -90,7 +90,7 @@ node server.js
 
 🌐 API Base URL
 When hosted on Render:
-https://backend-e-commerce-3-u60q.onrender.com
+https://backend-e-commerce-5-h0mz.onrender.com
 
 
 
