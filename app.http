@@ -1,0 +1,45 @@
+GET http://localhost:5000/api/products 
+###
+
+GET http://localhost:5000/api/products/692aba4b6ab7df6f3d745515
+
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "testuser@gmail.com",
+  "password": "123456"
+}
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "testuser@gmail.com",
+  "password": "123456"
+}
+###
+
+POST http://localhost:5000/api/cart/add
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MmFkMTUxYjVkOWQ1MjQ1MjI2NTYyNiIsImlhdCI6MTc2NDQxNDgyOSwiZXhwIjoxNzY1MDE5NjI5fQ.VLhDES-XQBAY0MR7nJnIuJLWX0kFx7fjKhIVDEPJlXg
+
+{
+  "productId": "692aba4b6ab7df6f3d745526",
+  "size": "M",
+  "qty": 2
+}
+###
+
+GET http://localhost:5000/api/cart 
+###
+
+POST http://localhost:5000/api/orders 
+###
+
+GET http://localhost:5000/api/orders
+###
+GET http://localhost:5000/api/orders/692ada0894dd7d8671eccc0f
+
