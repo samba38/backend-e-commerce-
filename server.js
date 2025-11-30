@@ -23,9 +23,12 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
     cors({
-        origin: "http://localhost:5173",  // React frontend
-        credentials: true,                // Allow cookies
-    })
+  origin: [
+    "http://localhost:5173",
+    process.env.FRONTEND_URL
+  ],
+  credentials: true,
+})
 );
 
 // Connect to MongoDB
