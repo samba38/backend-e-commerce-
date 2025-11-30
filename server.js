@@ -25,7 +25,7 @@ app.use(
     cors({
   origin: [
     "http://localhost:5173",
-    "https://your-frontend-domain.onrender.com",
+    "https://backend-e-commerce-2-wjzg.onrender.com",
     process.env.FRONTEND_URL
   ],
   credentials: true,
