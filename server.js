@@ -26,7 +26,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",                       // dev frontend
-      "https://your-frontend-render-url.onrender.com" // deployed frontend (replace)
+      "https://frontend-e-commerce-zeta.vercel.app" // deployed frontend (replace)
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
