@@ -21,16 +21,18 @@ const app = express();
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
+// server.js (cors middleware)
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
-      "https://backend-e-commerce-2-wjzg.onrender.com"
+      "http://localhost:5173",                       // dev frontend
+      "https://your-frontend-render-url.onrender.com" // deployed frontend (replace)
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
+
 
 
 // Connect to MongoDB

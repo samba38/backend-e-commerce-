@@ -56,13 +56,12 @@ exports.loginUser = async (req, res) => {
 
     // Store token inside HTTP-only cookie
     res.cookie("jwt", token, {
-  httpOnly: true,
-  secure: true,
-  sameSite: "none",
-  domain: ".onrender.com",
-  maxAge: 7 * 24 * 60 * 60 * 1000,
-  path: "/"
-});
+      httpOnly: true,
+      secure: true,      // required for cross-site cookies over HTTPS
+      sameSite: "none",  // allow cross-site
+      path: "/",         
+      maxAge: 7 * 24 * 60 * 60 * 1000,
+    });
 
 
     res.json({
